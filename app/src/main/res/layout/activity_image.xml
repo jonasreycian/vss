@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageActivity"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutGalleryOriginalImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imageViewGalleryOriginalImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/no_image"
+            android:contentDescription="@string/todo" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutButtons1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/imageViewGalleryOriginalImage"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButtonGalleryBackToHomeActivity"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_arrow_circle_left"
+                android:background="@drawable/oval_shape"
+                android:contentDescription="@string/todo" />
+
+            <ImageButton
+                android:id="@+id/imageButtonGalleryGoToGrayscaleImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_arrow_circle_right"
+                android:background="@drawable/oval_shape"
+                android:contentDescription="@string/todo"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutGalleryGrayscaleImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="45dp">
+
+        <ImageView
+            android:id="@+id/imageViewGalleryGrayscaleImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/no_image"
+            android:contentDescription="@string/todo"  />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutButtons2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/imageViewGalleryGrayscaleImage">
+
+            <ImageButton
+                android:id="@+id/imageButtonGalleryBackToOriginalImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_arrow_circle_left"
+                android:background="@drawable/oval_shape"
+                android:contentDescription="@string/todo" />
+
+            <ImageButton
+                android:id="@+id/imageButtonGalleryGoToResultImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_arrow_circle_right"
+                android:background="@drawable/oval_shape"
+                android:contentDescription="@string/todo"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutGalleryResultImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="45dp">
+
+        <ImageView
+            android:id="@+id/imageViewGalleryResultImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/no_image"
+            android:contentDescription="@string/todo" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutGalleryResultImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/imageViewGalleryResultImage">
+
+            <ImageButton
+                android:id="@+id/imageButtonGalleryBackToGrayscaleImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_arrow_circle_left"
+                android:background="@drawable/oval_shape"
+                android:contentDescription="@string/todo" />
+<!--
+            <ImageButton
+                android:id="@+id/imageButtonGalleryGoToResultImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_arrow_circle_right"
+                android:background="@drawable/oval_shape"
+                android:contentDescription="@string/todo"/>-->
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
